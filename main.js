@@ -16,3 +16,28 @@ if (form) {
     }
   });
 }
+// حاسبة العمولة
+function calculateFee() {
+    let amount = document.getElementById("dealAmount").value;
+    let fee = amount * 0.05;
+    document.getElementById("fee").innerText = fee.toFixed(2) + " د.ل";
+}
+
+// تبديل اللغة (عربي / إنجليزي)
+function switchLanguage(lang) {
+    let ar = document.getElementById("lang-ar");
+    let en = document.getElementById("lang-en");
+    if (lang === 'ar') {
+        ar.style.display = "block";
+        en.style.display = "none";
+    } else {
+        ar.style.display = "none";
+        en.style.display = "block";
+    }
+}
+
+// إظهار الواجهة الرئيسية بعد الضغط على زر الدخول
+function enterSite() {
+    document.getElementById("entry-screen").style.display = "none";
+    document.getElementById("main-content").style.display = "block";
+}
